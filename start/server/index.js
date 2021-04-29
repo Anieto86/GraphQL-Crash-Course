@@ -1,5 +1,5 @@
 const { ApolloServer } = require("apollo-server");
-//const { mainCards, animals, categories } = require("./db");
+const { mainCards, animals, categories } = require("./db");
 const typeDefs = require("./schema");
 
 const Query = require("./resolvers/Query");
@@ -12,6 +12,12 @@ const server = new ApolloServer({
     Query,
     Animal,
     Category,
+  },
+  context: {
+    //the context works centralizing the DB and the you pass the data in the context argumet, don't forguet destructuring+
+    mainCards,
+    animals,
+    categories,
   },
 });
 
