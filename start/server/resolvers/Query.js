@@ -1,18 +1,18 @@
-//const { mainCards, animals, categories } = require("../db"); that was passend in the contex
+//const { mainCards, animals, categories } = require("../db"); //that was passend in the contex
 
 const Query = {
-  mainCards: () => mainCards,
-  animals: () => animals,
+  mainCards: (parent, args, { mainCards }) => mainCards,
+  animals: (parent, args, { animals }) => animals,
   animal: (parent, args, { animals }) => {
-    console.log(args);
-
     const animalToBeFound = animals.find((animal) => {
-      return animal.slug === args.slug;
+      return animal.slug === args.slug.toLowerCase();
     });
     return animalToBeFound;
   },
-  categories: () => categories,
+  categories: (parent, args, { categories }) => categories,
   category: (parent, args, { categories }) => {
+    console.log({ parent }, "1");
+    console.log({ args }, "1");
     const category = categories.find((animalCategory) => {
       return animalCategory.category === args.category;
     });

@@ -6,15 +6,17 @@ const Query = require("./resolvers/Query");
 const Animal = require("./resolvers/Animal");
 const Category = require("./resolvers/Category");
 
+const Mutation = require("./resolvers/Mutation");
+
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
     Query,
     Animal,
     Category,
+    Mutation,
   },
   context: {
-    //the context works centralizing the DB and the you pass the data in the context argumet, don't forguet destructuring+
     mainCards,
     animals,
     categories,
@@ -24,3 +26,5 @@ const server = new ApolloServer({
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
+
+// /the context works centralizing the DB and the you pass the data in the context argumet, don't forguet destructuring+
