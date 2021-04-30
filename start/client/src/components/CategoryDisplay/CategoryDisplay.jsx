@@ -15,7 +15,7 @@ function CategoryDisplay() {
                     return (
                         <Link to={`/products/${category.slug}`} className="CategoryDisplay-card-container">
                             <div className="CategoryDisplay-card">
-                                <img src={animals[category.img]} /> 
+                                <img src={animals[category.img]} alt="category" /> 
                             </div>
                             <h3>{category.category}</h3>
                         </Link>

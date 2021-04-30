@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import lion from "./image/lion2.jpg";
 import cham from "./image/cham.jpg";
 import dolphin from "./image/dolphin.jpg";
@@ -14,7 +15,6 @@ import penguin from "./image/penguin2.jpg";
 import cat from "./image/cat.jpg";
 import rhino from "./image/rhino.png";
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   lion,
   cham,

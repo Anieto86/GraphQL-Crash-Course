@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import LandingPage from "./pages/LandingPage";
 import CategoryPage from "./pages/CategoryPage";
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <ApolloProvider client={client}>
-        <BrowserRouter>
+        <Router>
           <Nav />
           <Switch>
             <Route exact strict path="/" component={LandingPage} />
@@ -30,7 +30,7 @@ function App() {
             />
             <Route exact strict path="/product/:slug" component={AnimalPage} />
           </Switch>
-        </BrowserRouter>
+        </Router>
       </ApolloProvider>
     </div>
   );
