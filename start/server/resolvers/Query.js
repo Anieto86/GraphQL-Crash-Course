@@ -12,7 +12,7 @@ const Query = {
   categories: (parent, args, { categories }) => categories,
   category: (parent, args, { categories }) => {
     console.log({ parent }, "1");
-    console.log({ args }, "1");
+    console.log({ args });
     const category = categories.find((animalCategory) => {
       return animalCategory.category === args.category;
     });

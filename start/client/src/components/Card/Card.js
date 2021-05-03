@@ -1,5 +1,5 @@
 import React from "react";
-import lion from "../../assets/image/lion2.jpg";
+//import lion from "../../assets/image/lion2.jpg";
 import "./Card.css";
 import star from "../../assets/svg/star.svg";
 import animal from "../../assets/images";
